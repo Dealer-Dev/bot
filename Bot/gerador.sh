@@ -4,7 +4,7 @@ unset readvalue
 [[ ! -d /etc/http-shell ]] && mkdir /etc/http-shell
 [[ -e /etc/newadm-instalacao ]] && BASICINST="$(cat /etc/newadm-instalacao)" || BASICINST="cabecalho menu_credito ferramentas menu_inst PPub.py usercodes payloads ssl paysnd.sh verifica PDirect.py v-local.log PGet.py ultrahost menu POpen.py shadowsocks.sh fai2ban PPriv.py"
 IVAR="/etc/http-instas"
-source <(curl -sSL https://raw.githubusercontent.com/ChumoGH/ChumoGH-Script/master/msg-bar/msg) >/dev/null
+source <(curl -sSL https://raw.githubusercontent.com/Dev/SCRIPT-RABBIT-BO/main/msg-bar/msg) >/dev/null
 #!/bin/bash
 # menu maker (opciones 1, 2, 3,.....)
 flech='➮' cOlM='⁙' && TOP='‣' && TTini='=====>>►► 🐲' && cG='/c' && TTfin='🐲 ◄◄<<=====' && TTcent='💥' && RRini='【  ★' && RRfin='★  】' && CHeko='✅' && ScT='🛡️' && FlT='⚔️' && BoLCC='🪦' && ceLL='🧬' && aLerT='⚠️' && _kl1='ghkey' && lLaM='🔥' && pPIniT='∘' && bOTg='🤖' && kL10='tc' && rAy='⚡' && tTfIn='】' && TtfIn='【' tTfLe='►' && am1='/e' && rUlq='🔰' && h0nG='🍄' && lLav3='🗝️' && m3ssg='📩' && pUn5A='⚜' && p1t0='•' nib="${am1}${kL10}"
@@ -201,7 +201,7 @@ del() {
 
 [[ -d /bin/ejecutar ]] && {
     [[ ! -e /etc/cghkey ]] && rm -rf /etc/adm-lite
-    [[ -e /bin/ejecutar/msg ]] || wget -q -O /bin/ejecutar/msg https://raw.githubusercontent.com/ChumoGH/ChumoGH-Script/master/msg-bar/msg
+    [[ -e /bin/ejecutar/msg ]] || wget -q -O /bin/ejecutar/msg https://raw.githubusercontent.com/Dev/SCRIPT-RABBIT-BO/main/msg-bar/msg
 } || mkdir /bin/ejecutar
 cor[0]="\033[0m"
 cor[1]="\033[1;34m"
@@ -223,7 +223,7 @@ tittle() {
     killall kswapd0 ksoftirqd >/dev/null 2>&1
     clear && clear
     msg -bar
-    echo -e "\033[7;49;35m    ${TTini} GEN ChumoGH${TTcent}VPS ${TTfin}      \033[0m"
+    echo -e "\033[7;49;35m    ${TTini} Dealer GenBot${TTcent}VPS ${TTfin}      \033[0m"
     msg -bar
 }
 
@@ -429,7 +429,7 @@ fix_key() {
     #$(cat < /etc/ADM-db/resell)
     msg -bar
     echo -e " ${ScT}  *INSTALADOR UNIVERSAL*   ${ScT}"
-    msg -bar && echo -ne "$(msg -verd "apt update -y &&") $(msg -aqua "apt upgrade -y &&\n") " && msg -bra "\033[7;49;35m wget -q https://raw.githubusercontent.com/ChumoGH/ScriptCGH/main/setup && chmod 777 setup && ./setup --install"
+    msg -bar && echo -ne "$(msg -verd "apt update -y &&") $(msg -aqua "apt upgrade -y &&\n") " && msg -bra "\033[7;49;35m wget -q https://raw.githubusercontent.com/Dev/SCRIPT-RABBIT-BO/main/setup && chmod 777 setup && ./setup --install"
     msg -bar
     [[ -e /etc/menu_numito ]] && menumito="$(cat /etc/menu_numito)" || menumito="https://t.me/ChumoGH_bot"
     [[ -z $vkey ]] && vkey="@ChumoGH"
@@ -614,7 +614,7 @@ act_gen() {
 }
 
 rmv_iplib() {
-    echo -e "SERVIDORES DE KEY ATIVOS!"
+    echo -e "SERVIDORES DE KEY ACTIVOS!"
     rm /var/www/html/newlib && touch /var/www/html/newlib
     rm ${SCPT_DIR}/*.x.c &>/dev/null
     [[ -z $(ls $DIR | grep -v "ERROR-KEY") ]] && return
@@ -623,7 +623,7 @@ rmv_iplib() {
             var=$(cat ${DIR}/${arqs}.name)
             ip=$(cat ${DIR}/${arqs}/keyfixa)
             # echo -ne "\033[1;31m[USUARIO]:(\033[1;32m${var%%[*}\033[1;31m) \033[1;33m[GERADOR]:\033[1;32m ($ip)\033[0m"
-            echo "$ip" >>/var/www/html/newlib && echo -e " \033[1;36m[ATUALIZADO]"
+            echo "$ip" >>/var/www/html/newlib && echo -e " \033[1;36m[ACTUALIZADO]"
         fi
     done
     echo "51.222.29.216" >>/var/www/html/newlib
@@ -666,7 +666,7 @@ fum_ver() {
     echo -e "\n"
     echo -e " FILE Contend : ${REQUEST} $(echo ${REQUEST} | wc -c)"
     echo -e "\n"
-    echo -e " VERIFICA, Si tu key Contiene \033[1;45m KEY DE ChumoGH! \033[0m "
+    echo -e " VERIFICA, Si tu key Contiene \033[1;45m KEY DEL DEALER! \033[0m "
     echo -e "\n"
     msg -ne " Link Key: http://$(ofus $Keey) \n                      "
     IiP=$(ofus "$Keey" | grep -vE '127\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | grep -o -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}')
@@ -695,7 +695,7 @@ fum_ver() {
     msg -ne " \033[1;42mESTADO :\033[0m "
     [[ -e $HOME/list-key ]] && {
         echo -ne "  "
-        [[ $ofen = "KEY DE ChumoGH!" ]] &&
+        [[ $ofen = "KEY DEL DEALER!" ]] &&
             echo -e "KEY FUNCIONAL" && rm -f $HOME/list-key && echo -ne "\033[0m"
     } || echo -e " KEY INVALIDA O USADA\033[0m\n"
     #curl -s --connect-timeout 2 ${IiP}:81/${REQUEST}/menu_credito > menu_credito
