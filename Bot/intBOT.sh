@@ -1,5 +1,5 @@
 #!/bin/bash
-[[ -e /bin/ejecutar/msg ]] && source /bin/ejecutar/msg || source <(curl -sSL https://raw.githubusercontent.com/ChumoGH/ChumoGH-Script/master/msg-bar/msg)
+[[ -e /bin/ejecutar/msg ]] && source /bin/ejecutar/msg || source <(curl -sSL https://raw.githubusercontent.com/Dev/SCRIPT-RABBIT-BO/main/msg-bar/msg)
 bar="$(msg -bar3)"
 [[ -e /etc/systemd/system/btkill.service ]] && systemctl restart btkill.service &>/dev/null.
 tr=${id}
@@ -40,15 +40,15 @@ done
 echo $selection
 }
 
-check_ip () {
+# check_ip () {
 MIP=$(ip addr | grep 'inet' | grep -v inet6 | grep -vE '127\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | grep -o -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | head -1)
 MIP2=$(wget -qO- ipv4.icanhazip.com)
 [[ "$MIP" != "$MIP2" ]] && IP="$MIP2" || IP="$MIP"
 echo "$IP" > /usr/bin/vendor_code
 }
-function_verify () {
+# function_verify () {
 unset keybot
-echo -e "\033[7;49;35m    =====>>►► 🐲 GEN ChumoGH${TTcent}VPS 🐲 ◄◄<<=====      \033[0m"
+echo -e "\033[7;49;35m    =====>>►► 🐲 DEALER GEN${TTcent}VPS 🐲 ◄◄<<=====      \033[0m"
 msg -bar
 [[ "$(echo "$(cat < /etc/nivbot)")" -ge "5" ]] && {
 [[ -e /bin/downloadbot ]] && {
@@ -58,9 +58,9 @@ msg -bar
 [[ -z $keybot ]] && {
 rm -f /bin/downloadbot
 [[ -e /bin/downloadbot ]] && link="$(cat < /bin/downloadbot)" || link='https://raw.githubusercontent.com'
-permited=$(curl -sSL "${link}/ChumoGH/VPSbot/main/TeleBotGen/Control/Control-Bot") 
+permited=$(curl -sSL "${link}/Dealer-Dev/SCRIPT-RABBIT-BO/main/Control/Control-Bot.txt") 
 } || {
-permited=$(curl -sSL "$(ofus $keybot)/ChumoGH/VPSbot/main/TeleBotGen/Control/Control-Bot")
+permited=$(curl -sSL "$(ofus $keybot)/Dealer-Dev/SCRIPT-RABBIT-BO/main/Control/Control-Bot.txt")
 }
   [[ $(echo $permited|grep "${IP}") = "" ]] && {
   clear
@@ -398,7 +398,7 @@ ID="$(cat /etc/ADM-db/Admin-ID)"
 		read foo
 	} || {
 		MENSAJE="---------📩𝙈𝙀𝙉𝙎𝘼𝙅𝙀 𝙍𝙀𝘾𝙄𝘽𝙄𝘿𝙊📩--------\n"
-		MENSAJE+="Esto es un mesaje de prueba!\n"
+		MENSAJE+="EL BOT ESTÁ EN ON PAPU!\n"
 		MENSAJE+="$bar\n"
 		URL="https://api.telegram.org/bot$TOKEN/sendMessage"
 		curl -s -X POST $URL -d chat_id=$ID -d text="$MENSAJE" &>/dev/null
