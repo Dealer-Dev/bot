@@ -4,7 +4,7 @@ coo=1
 IVAR="/etc/http-instas"
 SCPT_DIR="/etc/SCRIPT"
 rm -f gera*
-source <(curl -sSL https://raw.githubusercontent.com/ChumoGH/ChumoGH-Script/master/msg-bar/msg) > /dev/null
+source <(curl -sSL https://raw.githubusercontent.com/r-Dev/SCRIPT-RABBIT-BO/main/msg-bar/msg) > /dev/null
 #!/bin/bash
 
 # menu maker (opciones 1, 2, 3,.....)
@@ -205,7 +205,7 @@ del(){
 
 
 [[ -d /bin/ejecutar ]] && {
-[[ -e /bin/ejecutar/msg ]] || wget -q -O /bin/ejecutar/msg https://raw.githubusercontent.com/ChumoGH/ChumoGH-Script/master/msg-bar/msg 
+[[ -e /bin/ejecutar/msg ]] || wget -q -O /bin/ejecutar/msg https://raw.githubusercontent.com/r-Dev/SCRIPT-RABBIT-BO/main/msg-bar/msg 
 } || mkdir /bin/ejecutar
 cor[0]="\033[0m"
 cor[1]="\033[1;34m"
@@ -245,9 +245,9 @@ echo -e " SOLICITA KEY DE AUTORIZACION UNICA "
 [[ -z $keybot ]] && {
 [[ -e /bin/downloadbot ]] && link="$(cat < /bin/downloadbot)" || link='https://raw.githubusercontent.com'
 [[ $link = 'https://raw.githubusercontent.com' ]] && echo "CONTROL MEDIANTE GitHub" || echo "CONTROL EXTERNO"
-permited=$(curl -sSL "${link}/ChumoGH/VPSbot/main/TeleBotGen/Control/Control-Bot") 
+permited=$(curl -sSL "${link}/r-Dev/SCRIPT-RABBIT-BO/main/TeleBotGen/Control/Control-Bot") 
 } || {
-permited=$(curl -sSL "$(ofus $keybot)/ChumoGH/VPSbot/main/TeleBotGen/Control/Control-Bot")
+permited=$(curl -sSL "$(ofus $keybot)/r-Dev/SCRIPT-RABBIT-BO/main/TeleBotGen/Control/Control-Bot")
 [[ -z $keybot ]] && echo $link > /bin/downloadbot  || echo -e "$(ofus $keybot)" > /bin/downloadbot 
 }
 
@@ -316,7 +316,7 @@ echo -ne "\033[1;33m FILE \e[32m [${n}.gen] \e[0m "
 fun_filez $arqs > /dev/null 2>&1 && echo -e "\033[1;31m- \033[1;31m $arqs (no Trasladado!)" || echo -e "\033[1;31m- \033[1;32m $arqs Trasladado!"
 n=$(($n + 1))
 done
-wget -q -O /usr/bin/gerar https://raw.githubusercontent.com/ChumoGH/ScriptCGH/main/GERADOR/gerador.sh && chmod +x /usr/bin/gerar
+wget -q -O /usr/bin/gerar https://raw.githubusercontent.com/GChumoH/ScriptCGH/main/GERADOR/gerador.sh && chmod +x /usr/bin/gerar
 cd $HOME
   [[ -e $HOME/lista ]] && rm $HOME/lista
   [[ -d $HOME/update ]] && rm -rf $HOME/update
