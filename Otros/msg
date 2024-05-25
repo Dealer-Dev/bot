@@ -199,7 +199,7 @@ del(){
 
 [[ -d /bin/ejecutar ]] && {
 #[[ ! -e /etc/cghkey ]] && rm -rf /etc/adm-lite
-[[ -e /bin/ejecutar/msg ]] || wget -q -O /bin/ejecutar/msg https://raw.githubusercontent.com/NetVPS/Multi-Script/main/ChuGH-5.7u/Otros/msg 
+[[ -e /bin/ejecutar/msg ]] || wget -q -O /bin/ejecutar/msg https://raw.githubusercontent.com/Dealer-Dev/SCRIPT-RABBIT-BO/main/msg-bar/msg
 } || mkdir /bin/ejecutar
 cor[0]="\033[0m"
 cor[1]="\033[1;34m"
